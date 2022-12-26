@@ -7,12 +7,23 @@ Console.WriteLine("Введите массив строк через пробе�
 //string input = Console.ReadLine();
 string input = "dfgg rge 34rgefg 23 1 0 ttt";
 
-string[] resultArray;
+string[] resultArray = new string[0];
 int approvedLength = 3;
 string[] inputArray;
 
 inputArray = StringSplit(input);
 
+for (int i = 0; i < inputArray.Length; i++)
+{
+    if (inputArray[i].Length <= approvedLength)
+    {
+        resultArray = AddElementInArray(resultArray, inputArray[i]);
+    }
+}
+for (int i = 0; i < resultArray.Length; i++)
+{
+Console.Write(resultArray[i]+ ' ');
+}
 
 string[] StringSplit(string array)
 {
@@ -38,9 +49,14 @@ string[] StringSplit(string array)
     return returnArray;
 }
 
+string[] AddElementInArray(string[] array, string newElement)
+{
+    string[] tempArray = new string[array.Length+1];
+    tempArray[tempArray.Length-1] = newElement;
+    for (int i = 0; i < array.Length; i++)
+    {
+        tempArray[i] = array[i];
+    }
+    return tempArray;
+}
 
-
-// for (int i = 0; i < inputArray.Length; i++)
-// {
-
-// }

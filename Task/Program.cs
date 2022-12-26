@@ -28,13 +28,18 @@ Console.WriteLine();
 // [“Hello”, “2”, “world”, “:-)”] → [“2”, “:-)”]
 void PrintStringArray(string[] array)
 {
-    Console.Write("[");
-    for (int i = 0; i < array.Length; i++)
+    if (array.Length == 0)
+        Console.Write("[]");
+    else
     {
-        if (i == array.Length - 1)
-            Console.Write('"' + array[array.Length - 1] + '"' + "]");
-        else
-            Console.Write('"' + array[i] + '"' + ", ");
+        Console.Write("[");
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (i == array.Length - 1)
+                Console.Write('"' + array[array.Length - 1] + '"' + "]");
+            else
+                Console.Write('"' + array[i] + '"' + ", ");
+        }
     }
 }
 

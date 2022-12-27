@@ -25,7 +25,6 @@ Console.Write(" -> ");
 PrintStringArray(resultArray);
 Console.WriteLine();
 
-// [“Hello”, “2”, “world”, “:-)”] → [“2”, “:-)”]
 void PrintStringArray(string[] array)
 {
     if (array.Length == 0)

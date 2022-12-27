@@ -16,7 +16,7 @@ for (int i = 0; i < inputArray.Length; i++)
 {
     if (inputArray[i].Length <= approvedLength)
     {
-        resultArray = AddElementInArray(resultArray, inputArray[i]);
+       resultArray = AddElementInArray(resultArray, inputArray[i]);
     }
 }
 
